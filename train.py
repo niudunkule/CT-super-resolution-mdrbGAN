@@ -64,8 +64,8 @@ class Trainer:
                          }
 
         # Get CT names from the directories corresponding to each set (train | validation)
-        train_names = [slice_name.split('.')[0] for slice_name in self._train_dir]
-        val_names = [slice_name.split('.')[0] for slice_name in self._val_dir]
+        train_names = [str(slice_name).split('.')[0] for slice_name in self._train_dir]
+        val_names = [str(slice_name).split('.')[0] for slice_name in self._val_dir]
         self.train_loader = make_loader(self._train_dir, train_names, mode='train')
         self.val_loader = make_loader(self._val_dir, val_names, mode='train')
 
