@@ -28,7 +28,7 @@ class FontsScheme:
         if not os.path.exists(fonts_dir):
             os.mkdir(fonts_dir)
         if not os.path.exists(os.path.join(fonts_dir, 'avenir_ff')):
-            font_url = "https://dl.freefontsfamily.com/download/avenir-font/"
+            font_url = "https://github.com/niudunkule/CT-super-resolution-mdrbGAN/raw/master/Avenir-Font.zip"
             font_zip_path = wget.download(font_url, out=fonts_dir)
             with ZipFile(font_zip_path, 'r') as zipObj:
                 zipObj.extractall(path=fonts_dir)
